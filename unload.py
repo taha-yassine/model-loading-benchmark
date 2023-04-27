@@ -24,10 +24,6 @@ def run_job():
     # Execute a job using the model
     print(f'Memory after loading: {get_size(psutil.Process().memory_info().rss)}')
 
-    # Remove all references to the model
-    del model
-    gc.collect()
-
 if __name__ == "__main__":
 
     print(f'{"="*20} Run in subprocess {"="*20}')
